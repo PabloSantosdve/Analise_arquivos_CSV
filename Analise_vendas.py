@@ -32,4 +32,14 @@ Depois de agrupar por produto, a gente fala:
 Ou seja, ele ignora as outras colunas (como data, preço, etc).
 
 """
-total_por_produto = df.groupby('Produto')['Total'].sum() #Sum soma os valores da coluna 'Total' que estavam agrupados.
+"""
+Sum() soma os valores da coluna 'Total' que estavam agrupados.
+ Exemplo prático: Se "mouse" tem duas vendas:
+
+R$30,00
+
+R$45,00
+
+Ele soma → R$75,00 como total vendido do mouse.
+"""
+total_por_produto = df.groupby('Produto')['Total'].sum() 
