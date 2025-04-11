@@ -43,3 +43,30 @@ R$45,00
 Ele soma → R$75,00 como total vendido do mouse.
 """
 total_por_produto = df.groupby('Produto')['Total'].sum() 
+"""
+groupby('Data') => agrupa por data.
+"""
+
+#DESCOBRE O DIA COM MAIS VENDAS 
+
+#Agrupando os dados por data e soma os totais de cada dia
+total_por_dia = df.groupby('Data')['Total'].sum()
+
+#Descobre qual foi o dia com mais vendas 
+dia_mais_vendas = total_por_dia.idxmax()
+"""
+idxmax() => pega o índice do maior valor (nesse caso, a data).
+"""
+
+#Descobre o valor total vendido nesse dia
+valor_mais_vendas = total_por_dia.max()
+"""
+.max() => pega o maior valor da tabela.
+"""
+
+#Exibindo na tela
+print("\n===Dia com mais vendas===")
+print(f"Dia com mais vendas: {dia_mais_vendas} - Total: R${valor_mais_vendas}")
+"""
+f"" permite colocar variáveis dentro da string com {}.
+"""
