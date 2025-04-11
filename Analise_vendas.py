@@ -70,3 +70,27 @@ print(f"Dia com mais vendas: {dia_mais_vendas} - Total: R${valor_mais_vendas}")
 """
 f"" permite colocar variáveis dentro da string com {}.
 """
+
+#Parte 3  doscobrindo qual foi o produto mais vendido em quantidade
+
+#Agrupa por produto e soma a quantidade total vendida de cada dia 
+quantidade_produto = df.groupby('Produto')['Quantidade'].sum()
+
+"""
+Queremos saber qual produto vendeu mais unidades, tipo:
+Mouse: 47
+Teclado: 15
+"""
+
+#Decobre o produto com mais unidade vendidas
+produto_mais_vendido = quantidade_produto.idxmax()
+qtd_mais_vendida = quantidade_produto.max
+
+"""
+.idxmax() => vai mostrar o nome do produto com mais unidades
+
+.max() => vai mostrar quantas unidades foram vendidas
+"""
+
+print("\n===Produto mais vendido===")
+print(f"produto mais vendido:{produto_mais_vendido} - Quantidade: {quantidade_mais_vendida}")
