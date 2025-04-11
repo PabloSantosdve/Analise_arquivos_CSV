@@ -84,7 +84,7 @@ Teclado: 15
 
 #Decobre o produto com mais unidade vendidas
 produto_mais_vendido = quantidade_produto.idxmax()
-qtd_mais_vendida = quantidade_produto.max
+qtd_mais_vendida = quantidade_produto.max()
 
 """
 .idxmax() => vai mostrar o nome do produto com mais unidades
@@ -93,4 +93,16 @@ qtd_mais_vendida = quantidade_produto.max
 """
 
 print("\n===Produto mais vendido===")
-print(f"produto mais vendido:{produto_mais_vendido} - Quantidade: {quantidade_mais_vendida}")
+print(f"produto mais vendido: {produto_mais_vendido} - Quantidade: {qtd_mais_vendida}")
+
+#Salvando o arquivo CSV em Xlsx
+df.to_excel("Produtos_convertido.xlsx", index=False, engine="openpyxl")
+
+"""
+Entendendo o index
+index=True (padrão): Salva a coluna com os números da linha.
+
+index=False: Remove essa coluna na hora de salvar. Fica mais limpo.
+
+"""
+print("Arquivo convertido com sucesso!")
