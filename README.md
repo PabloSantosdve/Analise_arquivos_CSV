@@ -32,7 +32,7 @@ project:
   installation:
     steps:
       - Clone o repositório:
-        command: git clone 
+        command: git clone https://github.com/PabloSantosdve/Projeto_Analise_arquivos_CSV.git
       - Navegue para o diretório do projeto:
         command: cd Projeto_Analise_arquivos_CSV
       - Crie o ambiente virtual (opcional):
@@ -44,3 +44,14 @@ project:
         command: pip install -r requirements.txt
       - Execute o script principal:
         command: python Analise_vendas.py
+
+project_structure:
+  - Produtos.csv: # Arquivo original com dados de vendas
+  - Analise_vendas.py: # Script principal de análise
+  - README.md: # Documentação do projeto
+  - .venv/: # Ambiente virtual do Python
+
+## 🚀 Contribuições
+Este projeto foi desenvolvido como parte do aprendizado em análise de dados com Python. Contribuições e melhorias são bem-vindas!
+
+
