@@ -132,7 +132,7 @@ plt.tight_layout() #ajusta pra não cortar o texto
 plt.title('Total Vendido por Produto') #Titulo
 plt.xlabel('Produto')  #Nome do eixo x
 plt.ylabel('Total em R$') #nome do eixo y
-plt.xticks(rotation=45)  # gira os nomes 45 graus
+plt.xticks(rotation= 90)  # gira os nomes 90 graus
 
 #Salvando como PNG antes de exibir 
 plt.savefig("Grafico_vendas.png", dpi= 300, bbox_inches='tight')
