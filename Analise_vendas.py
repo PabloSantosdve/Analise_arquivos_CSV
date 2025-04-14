@@ -1,5 +1,5 @@
 import pandas as pd
-
+import matplotlib.pyplot as plt
 #Lê o arquivo CSV
 #O encoding é o "tradutor" entre o que está salvo no arquivo e o que o Python entende.
 """
@@ -105,4 +105,44 @@ index=True (padrão): Salva a coluna com os números da linha.
 index=False: Remove essa coluna na hora de salvar. Fica mais limpo.
 
 """
+
+#Dados para grafico
+produtos = list(total_por_produto.index) # cria uma Lista com os nomes dos produtos
+valores = list(total_por_produto.values) # cria uma lista com o total vendido de cada produto  
+
+#criando o grafico 
+plt.figure(figsize=(8, 5)) #Define o tamanho da imagem 
+plt.bar(produtos, valores, color = 'skyblue')
+
+#Criando o grafico em pizza
+plt.figure(figsize=(8, 8)) #Deixa o grafico quadrado
+
+plt.pie(
+    valores,
+    labels = produtos,
+    autopct='%1.1f%%',  #Mostra as porcentagens com 1 casa decimal
+    startangle= 90,  #começa o grafico a partir do topo 
+    shadow= True #adiciona uma sombra 
+)
+plt.savefig("Participação nas Vendas por Produto")
+plt.tight_layout() #ajusta pra não cortar o texto 
+
+
+#Personalizando
+plt.title('Total Vendido por Produto') #Titulo
+plt.xlabel('Produto')  #Nome do eixo x
+plt.ylabel('Total em R$') #nome do eixo y
+plt.xticks(rotation=45)  # gira os nomes 45 graus
+
+#Salvando como PNG antes de exibir 
+plt.savefig("Grafico_vendas.png", dpi= 300, bbox_inches='tight')
+plt.savefig("Grafico_vendas_pizza.png", dpi=300, bbox_inches='tight')
+"""
+- 'grafico_vendas.png': nome do arquivo.
+- dpi=300: qualidade boa pra impressão.
+- bbox_inches='tight': ajusta o corte do gráfico pra não sair cortado.
+"""
+#Exibindo o grafico na tela 
+plt.show()
+
 print("Arquivo convertido com sucesso!")
