@@ -1,57 +1,23 @@
-# Analisador de Arquivo CSV de Vendas
+## Analisador de Arquivo CSV de Vendas
+Este projeto lê um arquivo .csv com dados de vendas e realiza uma análise simples.
 
-Este projeto tem como objetivo analisar dados de vendas de um arquivo CSV e gerar informações úteis, como:
+## ✅ O que o programa faz:
+Calcula o dia com mais vendas.
 
-- Total vendido por produto
-- O dia com maior valor em vendas
-- O produto mais vendido (em quantidade)
-- Exportação do relatório em Excel (.xlsx)
+Mostra o produto mais vendido.
 
-## 📄 Descrição do Projeto
+Converte o CSV em arquivo Excel (.xlsx).
 
-```yaml
-project:
-  name: Analisador de Arquivo CSV de Vendas
-  description: |
-    Este projeto visa fornecer uma análise completa dos dados de vendas de um arquivo CSV. A partir dos dados fornecidos, o script realiza cálculos como o total vendido por produto, identifica o dia com mais vendas, e determina o produto mais vendido (em quantidade).
-    Além disso, os resultados podem ser exportados para uma planilha Excel (.xlsx) para facilitar a visualização e o armazenamento dos dados.
-    
-  concepts:
-    - Pandas: Manipulação de dados tabulares
-    - Leitura e gravação de arquivos CSV e Excel
-    - Agrupamento de dados com `groupby`
-    - Cálculos e agregações de dados
-    - Exportação de dados para planilha (.xlsx) usando `openpyxl`
-    - Análise de vendas e geração de relatórios
-    
-  prerequisites:
-    - Python 3.x
-    - Ambiente virtual (opcional, mas recomendado)
-    - Bibliotecas necessárias: `pandas`, `openpyxl`
+## Gera dois gráficos:
 
-  installation:
-    steps:
-      - Clone o repositório:
-        command: git clone https://github.com/PabloSantosdve/Projeto_Analise_arquivos_CSV.git
-      - Navegue para o diretório do projeto:
-        command: cd Projeto_Analise_arquivos_CSV
-      - Crie o ambiente virtual (opcional):
-        command: python -m venv .venv
-      - Ative o ambiente virtual:
-        windows: .\.venv\Scripts\Activate
-        linux: source .venv/Scripts/activate
-      - Instale as dependências:
-        command: pip install -r requirements.txt
-      - Execute o script principal:
-        command: python Analise_vendas.py
+📊 Gráfico de barras mostrando o total vendido por produto.
 
-project_structure:
-  - Produtos.csv: # Arquivo original com dados de vendas
-  - Analise_vendas.py: # Script principal de análise
-  - README.md: # Documentação do projeto
-  - .venv/: # Ambiente virtual do Python
+🥧 Gráfico de pizza mostrando a proporção de vendas por produto.
 
-## 🚀 Contribuições
-Este projeto foi desenvolvido como parte do aprendizado em análise de dados com Python. Contribuições e melhorias são bem-vindas!
+## 💻 Como usar:
+Adicione seu arquivo Produtos.csv na mesma pasta do código.
 
+# Execute o script Python:
+python Analise_vendas.py
 
+Veja os resultados no terminal, no Excel e nas imagens .png geradas.
