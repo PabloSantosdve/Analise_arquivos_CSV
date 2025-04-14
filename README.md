@@ -1,23 +1,20 @@
-## Analisador de Arquivo CSV de Vendas
-Este projeto lê um arquivo .csv com dados de vendas e realiza uma análise simples.
+# 🧾 Analisador de Arquivo CSV de Vendas
 
-## ✅ O que o programa faz:
-Calcula o dia com mais vendas.
+Projeto simples que analisa um arquivo `.csv` com dados de vendas e exibe as informações mais importantes.
 
-Mostra o produto mais vendido.
+## ⚙️ Funcionalidades
 
-Converte o CSV em arquivo Excel (.xlsx).
+- 🔍 Mostra o **dia com mais vendas**.
+- 🏆 Exibe o **produto mais vendido**.
+- 💾 Converte o CSV em **arquivo Excel (.xlsx)**.
+- 📊 Gera dois tipos de gráficos:
+   - Gráfico de **barras** com o total vendido por produto.
+   - Gráfico de **pizza** com a proporção de vendas por produto.
 
-## Gera dois gráficos:
+## 💻 Como usar
 
-📊 Gráfico de barras mostrando o total vendido por produto.
+1. Coloque seu arquivo `Produtos.csv` na mesma pasta do código.
+2. Execute o script no terminal:
 
-🥧 Gráfico de pizza mostrando a proporção de vendas por produto.
-
-## 💻 Como usar:
-Adicione seu arquivo Produtos.csv na mesma pasta do código.
-
-# Execute o script Python:
-python Analise_vendas.py
-
-Veja os resultados no terminal, no Excel e nas imagens .png geradas.
+   ```bash
+   python Analise_vendas.py
