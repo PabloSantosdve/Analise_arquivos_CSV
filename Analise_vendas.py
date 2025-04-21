@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 #Lê o arquivo CSV
 #O encoding é o "tradutor" entre o que está salvo no arquivo e o que o Python entende.
 """
-utf-8 → É o mais usado no mundo todo, funciona bem com vários idiomas. Mas nem sempre funciona com arquivos feitos no Windows/Excel BR.
+utf-8  É o mais usado no mundo todo, funciona bem com vários idiomas. Mas nem sempre funciona com arquivos feitos no Windows/Excel BR.
 
 latin1 ou ISO-8859-1 → Muito usado em arquivos salvos no Windows/Excel em português. Ele entende acentos e cedilha tipo: "ação", "coração", "maçã", "peça".
 """
